@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Générale</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz Générale</h1>
+        <div class="difficulty-selection">
+            <label for="difficulty">Choisissez votre niveau :</label>
+            <select id="difficulty">
+                <option value="easy">Facile</option>
+                <option value="medium">Moyen</option>
+                <option value="hard">Difficile</option>
+            </select>
+            <button id="start-button">Démarrer</button>
+        </div>
+
+        <div class="quiz hidden">
+            <div id="question-text"></div>
+            <div id="options-container"></div>
+            <div id="message" class="hidden"></div>
+            <div class="button-container">
+                <button id="next-button" class="hidden">Suivant</button>
+                <button id="restart-button" class="hidden">Recommencer</button>
+                <button id="back-button" class="hidden">Retour</button>
+            </div>
+            <div class="info-container">
+                <p>Score: <span id="score">0</span></p>
+                <p>Temps restant: <span id="time">60</span> secondes</p>
+                <p>Tentatives restantes : <span id="attempts-left">3</span></p>
+            </div>
+        </div>
+    </div>
+
+    <button id="toggle-music"><span id="music-icon">🎵</span></button>
+    <audio id="background-music" src="path_to_your_music_file.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
